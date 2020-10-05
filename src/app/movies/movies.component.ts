@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { features } from 'process';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
@@ -18,6 +19,8 @@ export class MoviesComponent implements OnInit {
   movies: Movie[];
 
   @Input("criteria")  criteria: any;
+
+  name = new FormControl('');
   
   
 constructor(private movieService: MovieService) { }
