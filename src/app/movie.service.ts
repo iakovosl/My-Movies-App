@@ -9,6 +9,6 @@ export class MovieService {
   getMovies(): Movie[] {
   return MOVIES;
   }
-
+ 
   constructor() { }
 }
