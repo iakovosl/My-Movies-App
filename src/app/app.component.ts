@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,4 @@ import { FormControl } from '@angular/forms';
 export class AppComponent {
   title = 'Movies App';
   
-  name = new FormControl('');
-  updateName() {
-    this.name.setValue('Iakovos');
-  }
 }

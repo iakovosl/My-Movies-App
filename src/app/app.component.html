@@ -1,21 +1,15 @@
 <h1>{{title}}</h1>
-<nav>
-    <a routerLink="/movies">Heroes</a>
-  </nav>
 
-  <label>
-    Name:
-  <input type="text" [formControl] = "name">
-  </label>
-  <p>
-    Value: {{name.value}}
-  </p>
-  <p>
-    <button (click) = "updateName()">update Name</button>
-  </p>
+<h2>All movies</h2>
+<app-movies></app-movies>
+<h2>Featured movies</h2>
+<app-movies [criteria]="{featured: true}" ></app-movies>
 
+<li><a routerLink = "movies" routerLinkActive="active" >All movies</a></li>
+<li><a [routerLink]= "['movies', {featured: true}]" >Featured movies</a></li>
  
-  
+<app-signup></app-signup>
+
 <router-outlet></router-outlet>
 
 

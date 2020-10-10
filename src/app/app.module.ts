@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup/signup.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

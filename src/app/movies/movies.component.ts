@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { features } from 'process';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
+import {Router, ActivatedRoute, ParamMap} from '@angular/router';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class MoviesComponent implements OnInit {
   name = new FormControl('');
   
   
-constructor(private movieService: MovieService) { }
+constructor(private movieService: MovieService, route: ActivatedRoute) { }
 
 
   ngOnInit(): void { 
@@ -36,7 +37,6 @@ constructor(private movieService: MovieService) { }
 
  
   getMovies(): void {
-    this.movies = this.movieService.getMovies();
+    this.movies = this.movieService.getMovies(this.criteria);
   }
-  
 }

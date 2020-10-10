@@ -6,9 +6,16 @@ import { MOVIES } from './mock-movies';
   providedIn: 'root'
 })
 export class MovieService {
-  getMovies(): Movie[] {
-  return MOVIES;
-  }
+  getMovies(criteria): Movie[] {
+      if (criteria) {
+        return MOVIES.filter(movie => movie.featured)
+      } else {
+        return MOVIES
+      }
+    
+  
+}
+  
  
   constructor() { }
 }
